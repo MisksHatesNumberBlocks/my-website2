@@ -60,11 +60,7 @@
           Also, you can click the buttons below to go to the other pages.
           <hr>
           <b>FILLER:</b>
-          <p><img src="linking.png" width="88">
-            <textarea readonly>
-            &lt;a href="//miskshatesnumberblocks.github.io&gt;&lt;img src="//miskshatesnumberblocks.github.io/linking.png" width="88"&gt;&lt;/a&gt;
-            </textarea>
-          </p>
+          <p><img src="linking.png" width="88" id="linking">Click to copy!</p>
           <hr>
       </p>
       <nav>
@@ -75,7 +71,11 @@
       <script>
       var dom = document;
       var about = dom.querySelector('#about'), stuff = dom.querySelector('#stuff');
+      var linking = dom.querySelector('#linking')
       about.onclick = () => {
+      };
+      linking.onclick = () => {
+        navigator.clipboard.writeText('<a href="//miskshatesnumberblocks.github.io"><img src="//miskshatesnumberblocks.github.io/linking.png" width="88"></a>')
       };
       var inspectOn = true; // ONLY FOR TESTING
       function inspect() {
