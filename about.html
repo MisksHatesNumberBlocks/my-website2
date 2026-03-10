@@ -8,9 +8,14 @@
   <body>
     <h1>About me</h1>
     <nav>
-      <button onclick="window.location.replace('index.html')"><i class="fa-solid fa-house"></i></button>
+      <button onclick="redirect('index.html')"><i class="fa-solid fa-house"></i></button>
       <button id="about"><i class="fa-solid fa-info"></i></button>
       <button id="stuff"><i class="fa-solid fa-box"></i></button>
     </nav>
+    <script>
+      function redirect(page) {
+        window.location.replace(page);
+      }
+    </script>
   </body>
 </html>
