@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <style>
+     @import "https://fonts.googleapis.com/css?family=Comic+Neue";
+     * {
+         font-family: 'Comic Neue', cursive;
+         font-weight: 600;
+     }
+     body {
+         background: repeating-linear-gradient(
+          50deg,
+          #bbbbbb,
+          #bbbbbb 5px,
+          #fff 5px,
+          #fff 10px
+        );
+     }
+     nav {
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 3px dashed black;
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        right: 0px;
+     }
+     nav button {
+         position: relative;
+         bottom: 15px;
+         border: none;
+         background: none;
+         color: black;
+         font-size: 15px;
+     }
+     nav .logo:hover {
+        filter: invert(100%); 
+     }
+     section {
+         background-color: white;
+         border: 3px solid black;
+         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+     }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My website">
-    <meta name="author" content="Misks81633">
-    <link rel="icon" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Mateus Barbosa">
+    <link rel="icon" href="favicon.png">  
     <title>Misks81633's Website</title>
     <script>
       document.title = '𝑀𝑎𝑡𝑒𝑢𝑠 :𝐷'
     </script>
   </head>
   <body>
-      <h1 id="header">Heelo!</h1>
-      <p>
-          Weelcome to my website!<br>
-          In this website, you can find lots of stuff!<br>
-          Also, you can click the buttons below to go to the other pages.
-          <hr>
-          <b>FILLER:</b>
-          <p><img src="linking.png" width="88" id="linking">Click to copy!</p>
-          <hr>
-      </p>
-      <nav>
-          <button><i class="fa-solid fa-house"></i></button>
-          <button id="about"><i class="fa-solid fa-info"></i></button>
-          <button id="stuff"><i class="fa-solid fa-box"></i></button>
-      </nav>
-      <script>
-      var dom = document;
-      var about = dom.querySelector('#about'), stuff = dom.querySelector('#stuff');
-      var linking = dom.querySelector('#linking')
-      about.onclick = () => {
+    <nav>
+      <img src="https://i.imgur.com/AbyvdKh.png" width="50" class="logo">
+      <button>About ⓘ</button>
+      <button onclick="redirect('https://example.com')">Gallery 🖼</button>
+    </nav>
+    <br><br><br> <section>
+        do yu like jazz?
+    </section>
+    <h1>Hello World!</h1>
+    <p>
+        Welcome to my website! <br>
+        I finally completed this sh██ after a huge hiatus. <br>
+        You may or not know me from <a href="https://castle.xyz">castle</a>
+    </p>
+    <script>
+      const dom = document;
+      function redirect(link) {
+          window.location.replace(link);
       };
-      linking.onclick = () => {
-        navigator.clipboard.writeText('<a href="//miskshatesnumberblocks.github.io"><img src="//miskshatesnumberblocks.github.io/linking.png" width="88"></a>')
+      dom.querySelector('.logo').onclick = () => {
+          alert('waffels 🧇😋')
       };
-      var inspectOn = true; // ONLY FOR TESTING
-      function inspect() {
-          var script = document.createElement("script");
-          script.src = "//cdn.jsdelivr.net/npm/eruda";
-          document.body.appendChild(script);
-          if (inspectOn) {
-             script.onload = function () {
-                eruda.init();
-             };
-          }
-      }
-      inspect()
-      
-      </script>
+    </script>
   </body>
 </html>
-<!-- 95 lines of code, what the hell 💀 -->
+<!-- 81 lines of code, what the hell 💀 -->
