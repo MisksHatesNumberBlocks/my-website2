@@ -7,12 +7,12 @@
     <h1>Oh noes!!</h1>
     <p>
       The page that you entered doesn't exist. <br>
-      Don't worry! We will automatically redirect you the main website.
+      Don't worry! We will automatically redirect you after 2 secs to the main website.
     </p>
     <script>
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     (async function() {
-      await sleep(1000);
+      await sleep(2000);
       window.location.replace('index.html');
     })()
     </script>
