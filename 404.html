@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>404</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
   </head>
   <body>
-    404 Not Found
+    <h1>Oh noes!!</h1>
+    <p>
+      The page that you entered doesn't exist. <br>
+      Don't worry! We will automatically redirect you the main website.
+    </p>
+    <script>
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    (async function() {
+      await sleep(1000);
+      window.location.replace('index.html');
+    })()
+    </script>
   </body>
 </html>
