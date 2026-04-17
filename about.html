@@ -1,98 +1,70 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
     <style>
-     @import "https://fonts.googleapis.com/css?family=Comic+Neue";
-     * {
-         font-family: 'Comic Neue', cursive;
-         font-weight: 600;
-     }
-     body {
-         background: repeating-linear-gradient(
-          50deg,
-          #bbbbbb,
-          #bbbbbb 5px,
-          #fff 5px,
-          #fff 10px
-        );
-     }
-     nav {
-        overflow: hidden;
-        background-color: rgb(255, 255, 255);
-        border-bottom: 3px dashed black;
-        position: fixed;
-        top: 0px;
-        width: 100vw;
-        right: 0px;
-     }
-     nav button {
-         position: relative;
-         bottom: 15px;
-         border: none;
-         background: none;
-         color: black;
-         font-size: 15px;
-     }
-     nav .logo:hover {
-        filter: invert(100%); 
-     }
-     section {
-         background-color: white;
-         border: 3px solid black;
-         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-     }
-     .note-bottom {
-         position: absolute;
-         bottom: 0px;
-         color: rgba(0, 0, 0, 0.5);
-     }
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji');
+    * {
+      color: white;
+      padding-top: 15px;
+      font-weight: normal;
+    }
+    a {
+      text-decoration: none;
+    }
+    body {
+      background: linear-gradient(130deg, #214F3E, black, #47054f);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    nav {
+      border-bottom: solid;
+      padding: 10px;
+      position: fixed;
+      left: 0px;
+      top: 5px;
+      width: 100vw;
+    }
+    .logo {
+      font-family: 'Noto Emoji';
+      font-size: 30px;
+    }
+    .k {
+      font-family: 'Noto Emoji';
+      position: absolute;
+      bottom: 0px;
+      right: 15px;
+    }
+    #ik {
+      text-decoration: underline;
+    }
     </style>
-    <meta charset="UTF-8">
+    <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My website">
-    <meta name="author" content="Mateus Barbosa">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="favicon.png">  
-    <title>Misks81633's Website</title>
-    <script>
-      document.title = '𝑀𝑎𝑡𝑒𝑢𝑠 :𝐷'
-    </script>
+    <title>🫪 - about</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   </head>
   <body>
     <nav>
-      <img src="https://i.imgur.com/AbyvdKh.png" width="50" class="logo">
-      <button onclick="redirect('index.html')">Home 🏠</button>
-      <button>About ⓘ</button>
-      <button onclick="redirect('https://example.com')">Gallery 🖼</button>
+      <a class="logo">🫪</a> • <!--excuse me what the fuck-->
+      <a href="index.html">home</a> •
+      <a>about</a> •
+      <a>stuff</a> •
+      <a>more</a>
     </nav>
-    <br><br>
-    <h1>About me</h1>
-    <p>
-        My username is WaffelGuy<br>
-        I'm a masculine guy on the internet and i like programming<br><br>
-        Things that i do:
-      <ul>
-        <li>Program</li>
-        <li>Watch videos</li>
-        <li>Play games</li>
-        <li>etc..</li>
-      </ul>
-      The things that i like:
-      <ul>
-        <li>🏰 Making games on castle.xyz</li>
-        <li> ▶ Watching tiktoks/youtube videos</li>
-      </ul>
-    </p>
-    <p class="note-bottom">note: when i was developing this website, i couldn't find the correct design so i sticked to this one</p>
+    <h2>uhh</h2>
+    i'm a masculine ♂ and i'm <span id="years"></span> years old and a person with autism <br>
+    for some reason i know: <br>
+    • html <!-- the language used in this page--> <br>
+    • css <!-- the language used to style this page--> <br>
+    • js <!-- the language used to add actions in this site--> <br>
+    • lua <br>
+    • python <br>
+    i first made a html in the Macéio hotel but it looked like <a href="moai.html" id="ik">this:</a>
     <script>
       const dom = document;
-      function redirect(link) {
-          window.location.replace(link);
-      };
-      dom.querySelector('.logo').onclick = () => {
-          alert('waffels 🧇😋')
-      };
+      const years = dayjs().diff('2017-04-02', 'year');
+      dom.querySelector('#years').innerHTML = years;
     </script>
   </body>
 </html>
-<!-- 97 lines of code, what the hell 💀 -->
+<!--Made in brazil, also, 70 LINES?🫪🫪-->
