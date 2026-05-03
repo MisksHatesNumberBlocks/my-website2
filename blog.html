@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Emoji');
+    * {
+      color: white;
+      font-family: Monospace;
+    }
+    blog {
+      display: block;
+      border: 3px solid white;
+    }
+    body {
+      background-color: #001d2a;
+      margin-top: 70px;
+    }
+    nav {
+      background-color: #085562;
+      border: #085562;
+      padding: 20px;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100vw;
+    }
+    nav button {
+      font-family: 'Noto Emoji';
+      border: none;
+      background: none;
+      padding: 0;
+      font-size: 15px;
+      color: white;
+    }
+    </style>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My website">
+    <meta name="author" content="Misks81633">
+    <link href="style.css">
+    <title>Misks81633's Website</title>
+    <script>
+      document.title = '𝑀𝑎𝑡𝑒𝑢𝑠 :𝐷'
+    </script>
+  </head>
+ <body>
+  <nav>
+   <button onclick="redirect('index.html')">🏠 home</button>
+   <button onclick="redirect('about.html')">ℹ about</button>
+   <button>🗃 stuff</button>
+  </nav>
+  <blog>
+    <h3>I finally inplemented blogs</h3>
+    <p>
+      Doesn't this look so cool? <br>
+    - 2026-5-3
+    </p>
+  </blog>
+  <script>
+     function redirect(wp) {
+       window.location.replace(wp);
+     }
+  </script>
+ </body>
+</html>
